@@ -20,7 +20,7 @@ export default class Router extends Component {
     return (
       <BrowserRouter>
         <MenuComponent />
-        <main className="container py-4">
+        <main className="mx-auto max-w-5xl px-4 py-8 sm:px-6">
           <Routes>
             <Route path="/" element={<HomeComponent />} />
             <Route path="/home/" element={<HomeComponent />} />

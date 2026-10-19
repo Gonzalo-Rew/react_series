@@ -30,7 +30,7 @@ export default class MenuComponent extends Component {
           >
             Series
           </NavLink>
-          <ul className="flex w-full list-none items-center gap-2 p-0 sm:w-auto">
+          <ul className="flex w-full list-none flex-wrap items-center gap-2 p-0 sm:w-auto">
             <li>
               <NavLink
                 to="/"

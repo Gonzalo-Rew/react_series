@@ -4,5 +4,14 @@
 
 body {
   margin: 0;
+  min-width: 320px;
+  background-color: #f8fafc;
+  color: #1e293b;
   font-family: Arial, sans-serif;
+}
+
+button,
+input,
+select {
+  font: inherit;
 }

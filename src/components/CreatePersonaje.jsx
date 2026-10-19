@@ -48,28 +48,35 @@ export default class CreatePersonaje extends Component {
       return <Navigate to={`/personajes/${this.state.idSerie}`} />;
     }
     return (
-      <div>
-        <h1>Nuevo Personaje</h1>
+      <div className="space-y-6 rounded-xl bg-white p-6 shadow-md">
+        <h1 className="text-3xl font-bold text-slate-800">Nuevo Personaje</h1>
 
-        <form onSubmit={this.handleSubmit}>
-          <label htmlFor="nombre">Nombre:</label>
+        <form className="space-y-4" onSubmit={this.handleSubmit}>
+          <label className="block font-medium text-slate-700" htmlFor="nombre">Nombre:</label>
           <input
             type="text"
             ref={this.inputNombre}
             required
             id="nombre"
             name="nombre"
+            className="w-full rounded-md border border-slate-300 px-3 py-2 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
           />
-          <label htmlFor="imagen">Imagen:</label>
+          <label className="block font-medium text-slate-700" htmlFor="imagen">Imagen:</label>
           <input
             type="text"
             ref={this.inputImagen}
             required
             id="imagen"
             name="imagen"
+            className="w-full rounded-md border border-slate-300 px-3 py-2 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
           />
-          <label htmlFor="serie">Serie:</label>
-          <select id="serie" ref={this.inputSerie} name="serie">
+          <label className="block font-medium text-slate-700" htmlFor="serie">Serie:</label>
+          <select
+            id="serie"
+            ref={this.inputSerie}
+            name="serie"
+            className="w-full rounded-md border border-slate-300 bg-white px-3 py-2 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
+          >
             {this.state.series.map((serie, index) => (
               <option key={index} value={serie.idSerie}>
                 {serie.nombre}
@@ -77,7 +84,12 @@ export default class CreatePersonaje extends Component {
             ))}
           </select>
 
-          <button type="submit">Insertar Personaje</button>
+          <button
+            className="rounded-md bg-blue-600 px-4 py-2 font-medium text-white transition-colors hover:bg-blue-700"
+            type="submit"
+          >
+            Insertar Personaje
+          </button>
         </form>
       </div>
     );
